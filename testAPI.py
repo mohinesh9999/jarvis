@@ -1,0 +1,10 @@
+from pycricbuzz import Cricbuzz
+c = Cricbuzz()
+matches = c.matches()
+# for match in matches:
+match=matches[0]
+print( match)
+if(match['mchstate'] != 'nextlive'):
+        print (c.livescore(match['id']))
+        print( c.commentary(match['id']))
+        print( c.scorecard(match['id']))
